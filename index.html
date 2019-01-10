@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    
+    <title>js</title>
+  </head>
+  
+  <body>
+       <div class="intro text-center">
+         <button class="btn btn-success" type="button" onclick="myFunction()">Hello</button>
+          <p id="content"></p>
+    </div>
+      
+     
+     <div class="bulbonoff text-center">
+     <button class="btn btn-secondary" type="button" onclick="bulbOn() ">on
+     </button>
+     <button class="btn btn-primary" type="button" onclick="bulbOff() ">off
+      </button>
+
+     <img src="images/pic_bulboff.gif" alt="" id="bulb">
+     </div>
+     <br>
+     <br>
+     <div class="time text-center">
+      <p class="display" >Click the button to display the date.</p>
+      <button class="btn btn-danger" type="button" onclick="displayTimeAndDate()">The time is?</button>
+      <p id="date"></p>
+      </div>
+      <br>
+     <br>
+     <div class="string text-center">
+         <h4>The Total Length of String</h4>
+         <p id="counter"></p>
+    </div>
+     
+     <div class="math_arithmetic text-center">
+       <button class="btn btn-success" type="button" onclick="arithmetic()"> Calculate(100 + 50) * a=?</button>
+       <p id="demo"></p>
+     </div>
+     <div class="array_sort text-center">
+      
+       <button class="btn btn-info" type="button" onclick="Array_Sort()">Array Sorting</button>
+       <p id="array"></p>
+     </div>
+     <div class="loop text-center">
+         <button class="btn btn-warning" type="button" onclick="Cars_Name()">Cars Name</button>
+        <p id="cars"></p>
+     </div>
+      
+     <div class="openhide text-center">
+      <button type="button" id="btn_open">Open</button>
+      <button type="button" class="btn_hide">Hide</button>
+
+      </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      function myFunction() {
+             document.getElementById("content").innerHTML = "WELCOME";
+       }
+      function bulbOn(){
+             document.getElementById("bulb").src="images/pic_bulbon.gif";
+       }
+      function bulbOff(){
+             document.getElementById("bulb").src="images/pic_bulboff.gif";
+       }
+
+       function displayTimeAndDate() {
+            document.getElementById("date").innerHTML = Date();
+      }
+      var text="Bangladesh"
+      document.getElementById("counter").innerHTML = text.length;
+
+      
+      function arithmetic(){
+       var a = 3;
+      var x = (100 + 50) * a;
+      document.getElementById("demo").innerHTML = x;
+      }
+         var subject = ["Math", "English", "Bangla", "Geography"];
+         document.getElementById("array").innerHTML = subject;
+
+       function Array_Sort() {
+      subject.sort();
+      document.getElementById("array").innerHTML = subject;
+     }
+           function Cars_Name(){
+           var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+           var text = "";
+           var i;
+         
+          for (i = 0; i < cars.length; i++) {
+            text += cars[i] + "<br>";
+          }
+          document.getElementById("cars").innerHTML = text;
+       }
+       $(document).ready(function(){
+       $("btn btn-primary_hide").click(function(){
+       alert("Yes, its ok.");
+   });
+});
+       $(document).ready(function(){
+    $("#btn_open").click(function(){
+        alert("Yes, its open the window");
+    });
+    
+    $(".btn_hide").click(function(){
+        $(".btn_hide").hide(5000);
+    });
+});
+       
+
+      
+    </script>
+        
+  </body>
+
+</html>

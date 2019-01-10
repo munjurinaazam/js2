@@ -1,0 +1,48 @@
+body{
+    border:1px solid green;
+}
+.intro {
+     margin-top:40px;
+}
+ p{
+    margin-top:10px;
+    color:blue;
+    font-weight: bold;
+}
+
+.btn-secondary{
+    color:blue;
+    background-color: #8484167d;
+    height: 42px;
+    width: 10%;
+}
+.btn-primary{
+   height: 42px;
+    width: 10%;
+    color:white;
+    background-color: #0000ff59;
+   
+
+}
+.string h4{
+    border: 4px solid;
+    display: inline-block;
+    
+}
+.display p{
+    color:black;
+}
+#btn_open{
+    width: 10%;
+    height: 40px;
+    background-color:#00ffff4f;
+    color:black;
+    font-weight: bold;
+}
+.btn_hide{
+    background-color: #4c0d0d54;
+    color:black;
+    width: 10%;
+    height: 40px;
+
+}
